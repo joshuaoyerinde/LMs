@@ -1,0 +1,58 @@
+i{
+    color: beige !important;
+}
+/* navbar item styling  */
+.navbar-brand{
+    color: white !important;
+}
+.search{
+    background-color: #F9682F;
+    color: white;
+    box-shadow: none;
+    width: 250%;
+}
+.nav-button{
+    background-color: black;
+    color: white;
+    width: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 9px;
+    padding: 5px 10px 6px;
+}
+.radio-box{
+    background-color: white;
+    height: 7px;
+    width: 7px;
+    border-radius: 100px;
+    margin-left: 30px;
+    display: none;
+}
+.nav-item{
+    margin-right: 20px;
+}
+.nav-item a {
+    text-decoration: none !important;
+    color: white !important;
+    letter-spacing: 1.5px;
+    font-weight: 500 !important;
+}
+/* .nav-item a:hover{
+    font-weight: 600 !important;
+} */
+.nav-item a:focus + .radio-box {
+    display: block !important;
+    font-weight: 700 !important;
+}
+.nav-item a:focus{
+    font-weight: 700 !important;
+    /* color: black !important; */
+}
+   
+
+
+/* for input  */
+input::-webkit-input-placeholder { color: white; }
+input:-moz-placeholder { color: white; }
+input::-moz-placeholder { color: white; }
+input:-ms-input-placeholder { color: white }

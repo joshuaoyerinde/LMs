@@ -1,0 +1,80 @@
+/* import "@splidejs/splide/dist/css/themes/splide-default.min.css"; */
+.jumbotron{
+    background-color:#FFF5F3;
+    background-attachment: fixed;
+    
+}
+h2{
+    font-weight: 600;
+    text-align: center !important;
+   
+}
+h3{
+    font-weight: 600;
+    font-size: 20px;
+}
+/* html.md-theme-default {
+    background-color: black;
+    background-color: var(--md-theme-default-background-variant,inherit);
+    color: rgba(0,0,0,0.87);
+    color: var(--md-theme-default-text-primary-on-background-variant, rgba(0,0,0,0.87));
+} */
+
+/* for the tabs */
+.md-tabs /deep/.md-tabs-navigation.md-elevation-0 {
+    background-color: inherit;
+    background-color: var(--md-theme-default-background-on-background, none);
+}
+.md-tabs /deep/.md-content.md-theme-default{
+    margin-top: 20px;
+}
+/* for indicatoes */
+.md-tabs /deep/.md-tabs-indicator {
+    background-color:  #F9682F !important;
+    background-color: var(--md-theme-default-primary-on-background,  #F9682F);
+    height: 5px;
+    /* width: 5px; */
+    /* margin-left: 245px; */
+    /* right: calc(100% - 213px); */
+}
+.md-tabs /deep/.md-active {
+    color: #F9682F  !important;
+    color: var(--md-theme-default-primary-on-background, #F9682F);
+}
+.md-tabs /deep/.md-button.md-tab-nav-button:hover{
+    text-decoration: none;
+}
+/* md-tabs styling ends here */
+
+@media only screen and (max-width: 600px) {
+    .jumbotron{
+        background-color: #fff;    
+    }
+}
+/* for the general styling */
+ul {
+    padding:0;
+    list-style:none;
+    line-height:3.3;
+    font-size:14px; 
+    margin-bottom:0;
+    margin-top: 15px;
+  }
+.item ul a{
+    color:#F9682F;
+    text-decoration:none;
+    /* opacity:0.; */
+    font-weight: 600;
+    
+    /* line-height: 5px; */
+  }
+  .item ul a:hover{
+      text-decoration: underline;
+      color: #F9682F;
+  }
+  h4{
+      font-size: 15px;
+      font-weight: 500;
+  }
+
+ 
