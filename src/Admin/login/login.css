@@ -1,0 +1,91 @@
+.form-control {
+    background-color: #ffffff;
+    background-clip: border-box;
+    color: #232323;
+    line-height: 1rem !important;
+    height: auto;
+     font-family: 'Jost', sans-serif;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      font-weight: 400;
+    padding: 0.6rem 1.2rem;
+    transition: border-color 0.25s ease 0s;
+    border: 1px solid transparent !important;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px 0px, rgba(0, 0, 0, 0.07) 0px 1px 3px 0px, rgba(0, 0, 0, 0.03) 0px 0px 0px 1px;
+  }
+  .form-active .form-control:invalid {
+    border-color: red;
+  }
+  .form-control, form .btn {
+      min-height: 48px;
+  }
+  .display-7 {
+    font-family: 'Jost', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  .btn-primary,
+  .btn-primary:active {
+    background-color: #F9682F !important;
+    border-color: #F9682F !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 2px 0 rgba(253, 94, 9, 0.316);
+  }
+  .form-control {
+    font-family: 'Jost', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+  .form-control > .mbr-iconfont {
+    font-size: 1.375rem;
+  }
+  .form-control:hover,
+  .form-control:focus {
+    /* box-shadow: rgba(240, 100, 25, 0.07) 0px 1px 1px 0px, rgba(230, 6, 6, 0.07) 0px 1px 3px 0px, rgba(0, 0, 0, 0.03) 0px 0px 0px 1px; */
+    border-color: #F9682F !important;
+  }
+  .form-control:-webkit-input-placeholder {
+    font-family: 'Jost', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+  .form-control:-webkit-input-placeholder > .mbr-iconfont {
+    font-size: 1.375rem;
+  }
+  blockquote {
+    border-color: #6592e6;
+  }
+  .cid-sIk1HJFjn0 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #ffffff;
+  }
+  .cid-sIk1HJFjn0 .mbr-overlay {
+    background-color: #ffffff;
+    opacity: 0.4;
+  }
+  .cid-sIk1HJFjn0 form.mbr-form {
+    border-radius: 10px;
+    background-color: #fafafa;
+  }
+  @media (min-width: 992px) {
+    .cid-sIk1HJFjn0 form.mbr-form {
+      padding: 3rem 2rem;
+      width: 60%;
+    }
+  }
+  @media (max-width: 991px) {
+    .cid-sIk1HJFjn0 form.mbr-form {
+      padding: 1rem;
+    }
+  }
+  .cid-sIk1HJFjn0 form.mbr-form .mbr-section-btn {
+    text-align: center;
+    width: 100%;
+  }
+  .cid-sIk1HJFjn0 form.mbr-form .mbr-section-btn .btn {
+    width: 100%;
+  }

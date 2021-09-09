@@ -37,7 +37,7 @@
                                 <div class="">
                                     <h3 class="name">Python for Data Science and Machine Learning</h3>
                                     <p class="description">
-                                        Mr WESly
+                                        Mr Wesley
                                     </p>
                                     <i class="fa fa-star" aria-hidden="true"></i>
                                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -57,7 +57,7 @@
                                 <div class="">
                                     <h3 class="name">100 dealing with Arrays in python</h3>
                                     <div class="description">
-                                        Mr Wesly
+                                        Mr Wesley
                                     </div>
                                     <i class="fa fa-star" aria-hidden="true"></i>
                                     <i class="fa fa-star" aria-hidden="true"></i>

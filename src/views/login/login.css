@@ -3,9 +3,9 @@
 }
 
    /* side 1 styling */
-   .side-1{
+.side-1{
        background-color: #F9682F !important;
-   }
+}
 
   /* styling foe the input both mobile and the desktop */
 
@@ -46,7 +46,7 @@
     margin: 155px 0 0 0;
     color: white;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 /* button styling */

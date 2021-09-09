@@ -2,10 +2,10 @@
     <div class="team-grid">
         <div class="container">
             <div class="intro">
-                <h2 class="text-center">Meet Our Intructor</h2>
-                <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet.</p>
+                <h2 class="text-center">Meet Our Instructors</h2>
+                <p class="text-center"><a class="links" href="https://www.archimetric.com/what-is-wireframe/" target="_blank">For more Details</a></p>
             </div>
-            <div class="row people">
+            <div class="row people animate__animated animate__fadeInUp">
                 <div class="col-md-4 col-lg-3 item" v-for="(details,i) in instructors" :key="i">
                     <div class="box" :style="details.image">
                         <div class="cover">
@@ -31,30 +31,30 @@ export default {
         instructors:[
             { 
                 image:{
-                    backgroundImage:`url(${require('../../assets/pics/woman.png')})`
+                    backgroundImage:`url(${require('../../assets/pics/instructors.png')})`
                 },
-                name: 'MR JOSEPH' ,
-                title: 'An expert node developer'
+                name: 'MR Wesley' ,
+                title: 'An expert in Machine Learning'
             },
              {
                 image:{
-                    backgroundImage:`url(${require('../../assets/pics/woman.png')})`
+                    backgroundImage:`url(${require('../../assets/pics/team-2.jpg')})`
                 },
-                name: 'MR Ayo' ,
+                name: 'Miss Sarah' ,
                 title: 'An expert in front end developement'
             },
             {
                 image:{
                     backgroundImage:`url(${require('../../assets/pics/woman.png')})`
                 },
-                name: 'Miss CLara' ,
+                name: 'Miss Rhoda' ,
                 title: 'An expert in Ui/Ux'
             },
             { 
                 image:{
-                    backgroundImage:`url(${require('../../assets/pics/woman.png')})`
+                    backgroundImage:`url(${require('../../assets/pics/team-3.jpg')})`
                 },
-                name: 'MR IYANU' ,
+                name: 'MR Josiah' ,
                 title: 'An expert in pyhton'
             },
         ],

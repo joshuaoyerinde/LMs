@@ -2,15 +2,19 @@
     <div>
         <nav class="navbar navbar-expand-sm navbar-dark shadow-sm fixed-top" style="background-color: #F9682F;">
             <a class="navbar-brand" href="#">LMS</a>
-                <form class="form-inline my-2 ml-5 my-lg-0">
+                <!-- <form class="form-inline my-2 ml-5 my-lg-0">
                     <input class="form-control search mr-sm-2" type="text" placeholder="Search">
-                </form>
+                </form> -->
                 <i class="fa fa-bars navbar-toggler d-lg-none" aria-hidden="true" style="color:white" data-toggle="collapse" data-target="#collapsibleNavId"    aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></i>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ml-auto mr-5 mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        <div class="radio-box mt-n2 text-center"></div>
+                        <router-link class="nav-link" to="/">
+                            Home
+                         </router-link>
+                         <div class="radio-box mt-n2"></div>
+                        <!-- <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
+                        <div class="radio-box mt-n2 text-center"></div> -->
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Courses</a>
@@ -35,6 +39,7 @@
     
 </template>
 <script>
+// im
 // import Login from '../../views/login/Login.vue'
 export default {
     name:'Navbar',

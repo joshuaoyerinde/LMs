@@ -69,7 +69,11 @@
     color:#fff;
     text-shadow:1px 1px 1px rgba(0,0,0,0.15);
   }
-  
+  .links{
+    font-style: italic;
+    font-size: small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
   .team-grid .item:hover .cover {
     opacity:1;
   }

@@ -1,0 +1,137 @@
+.tag {
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 3px;
+  }
+  
+  .tag-primary {
+    background-color: #ffd100;
+  }
+  
+  .wrapper {
+    padding: 26px 0;
+  }
+  
+  .wrapper-light {
+    background: #f6f6f6;
+  }
+  
+  .card-h {
+    scroll-snap-align: center;
+    background: white;
+    width: 220px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-h .card-thumbnail {
+    height: 190px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card-h .card-thumbnail img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .card-h .card-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  .card-h .card-body {
+    padding: 14px 20px 0;
+    flex: 1;
+  }
+  .card-h .card-foot {
+    padding: 0 20px 14px 20px;
+  }
+  .card-h .card-title {
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    white-space: normal;
+    margin-bottom: 6px;
+    max-height: 52px;
+  }
+  .card-h .card-name {
+    max-height: 42px;
+    line-height: 16px;
+  }
+  .card-h .card-rating {
+  align-self: flex-end;;
+    align-items: center;
+    display: flex;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .card-h .card-rating .stars {
+    margin-top: -2px;
+    margin-right: 10px;
+  }
+  .stars i {
+      color: #ffd100;
+  }
+  .card-h .card-specialties {
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    padding: 14px 20px 14px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+  }
+  
+  .scrollable-container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (min-width: 992px) {
+    .scrollable-container {
+      max-width: 960px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .scrollable-container {
+      max-width: 1140px;
+    }
+  }
+  
+  .scrollable-cards {
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    overflow-x: auto;
+    display: flex;
+    padding: 5px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .scrollable-cards .card-h {
+    flex-shrink: 0;
+    margin: 5px 5px;
+  }
+  .scrollable-cards .card-h:last-child {
+    border-right: 10px solid #f6f6f6;
+  }
+  
+  @media (min-width: 992px) {
+    .scrollable-cards {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px/2 0;
+    }
+    .scrollable-cards .card-h {
+      flex: 0 0 calc(25% - 10px);
+    }
+    .scrollable-cards .card-h:last-child {
+      border-right: 0;
+    }
+  }

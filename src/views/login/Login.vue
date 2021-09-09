@@ -3,7 +3,7 @@
   <!-- <div> -->
     <!-- <md-dialog :md-active.sync="showDialog"> -->
         <div class="row">
-            <div class="col-md-4 d-none d-md-block side-1 d-none d-md-block">
+            <div class="col-md-4 d-none d-md-block side-1 ">
             <div class="text-center p-5" id="come">
                 Welcome
             </div>
@@ -14,13 +14,13 @@
                        <button @click="hideDialog"><i class="fa fa-times" aria-hidden="true"></i></button> 
                     </div>
                 </div>
-                <form action="">
+                <form @submit.prevent="onSubmitLogin">
                     <div class="row p-4 mt-5">
                         <div class="col-md-12 mb-4">
-                            <input type="text" name="" id="" class="form-control" placeholder="Enter Email" >
+                            <input type="text" name="" v-model="email" class="form-control" placeholder="Enter Email" >
                         </div>
                         <div class="col-md-12">
-                            <input type="text" name="" id="" class="form-control" placeholder="Enter Password" >
+                            <input type="text" v-model="password" class="form-control" placeholder="Enter Password" >
                         </div>
                         <div class="checkbox ml-3 mt-2" id="keep">
                             <label><input type="checkbox"> Keep me signed in</label>
@@ -42,15 +42,29 @@
 </template>
 
 <script>
+import axios from 'axios';
   export default {
     name: 'Login',
     data: () => ({
-      showDialog: false
+      showDialog: false,
+        email:"",
+        password:"",
+        URL:"http://localhost:8000/api/login",
     }),
     props:['hideLogin'],
     methods:{
         hideDialog(){
             this.$emit("hideLogin",this.showDialog);
+        },
+        onSubmitLogin(){
+            let dataLogin = new FormData()
+            dataLogin.append('email', this.email)
+            dataLogin.append('password', this.password)
+            axios.post(this.URL, dataLogin).then(res=>{
+                console.log(res);
+            }).catch(err=>{
+                console.log(err)
+            })
         }
     }
   }

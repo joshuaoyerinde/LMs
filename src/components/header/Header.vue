@@ -2,7 +2,6 @@
     <div>
          <!-- ======= Hero Section ======= -->
          <Navbar @showDialogBox1="showDialogSignIn"/>
-         
         <header id="header" class="mt-n5">
         </header>
         <section id="hero">
