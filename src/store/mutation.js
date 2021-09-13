@@ -5,6 +5,7 @@ const mutations={
     // ADMIN  LOGIN FOR THE LMS RESPONSE............
     GET_RESPONSE(state,res){
         state.response = res
+        console.log(res);
     }
     // ..........
 }

@@ -20,8 +20,6 @@ const routes = [
       { path:'/python', name:'Python', component:Python},
     ]
   },
-  // { path:'/login', name:'Login', component:Login },
-  // { path :'/signup', name:'signup', component:Signup },
   {path: '/verify/:id', name:'verify', component:Verify},
   {path: '/notice', name:'notice', component:Notice},
   { path : '/videopage', name:'videopage', component:Videopage},

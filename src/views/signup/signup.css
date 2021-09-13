@@ -15,6 +15,7 @@ input::-webkit-input-placeholder { color: rgb(184, 180, 180); opacity: 0.8;}
 input:-moz-placeholder { color: white;  opacity: 0.1;}
 input::-moz-placeholder { color: white; opacity: 0.1;}
 input:-ms-input-placeholder { color: white; opacity: 0.1;}
+select:-ms-input-placeholder{color: white; opacity: 0.1;}
 .form-control{
     box-shadow: none;
     border: 1px solid #fdc5af;
@@ -22,6 +23,10 @@ input:-ms-input-placeholder { color: white; opacity: 0.1;}
     font-size: 12px;
     opacity: 2.7;
 }
+select{
+    font-size: 12px;
+    padding: 7px 30px 7px !important;
+}   
 .form-control:focus{
   border:1px solid #F9682F;
 }

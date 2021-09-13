@@ -9,6 +9,7 @@
             <div class="col-md-8 box-side-2">
                 <div class="p-2">
                     <h2>Learning form the <br> Best Professionals</h2>
+                    <button @click="hide"> <i class="fa fa-times"></i> </button>
                 </div>
                 <form action="" @submit.prevent="onSubmitRegister">
                     <div class="row p-2">
@@ -26,7 +27,14 @@
                         </div>
                         <div class="form-group col-md-11">
                             <input type="text" v-model="email" class="form-control" placeholder="Email">
-                        </div>  
+                        </div> 
+                        <!-- <div class="form-group col-md-11">
+                          <select class="form-control" >
+                            <option value="">Select Your Role</option>
+                            <option value="Student">Student</option>
+                            <option value="Tutor">Tutor</option>
+                          </select> 
+                        </div>  -->
                         <div class="form-group col-md-11">
                             <input type="text" v-model="password" class="form-control" placeholder="Password">
                         </div> 
@@ -84,13 +92,14 @@ export default {
           registerForm.append('password', this.password)
           registerForm.append('level', this.level)
           axios.post(this.URL,registerForm).then(res=>{
-              console.log(res)
+              console.log(res.data)
               setTimeout(() => {
                   this.spinner = false
-                  if (res.data.status == 200) {
-                      console.log("nice login")
+                  if (res.data.response) {
+                      this.$router.push({name:'notice'});
+                      console.log("nice login");
                       this.spinner = false
-                      this.$router.push('/notice');
+                      this.$emit('hidesignUp',this.hideSignUp);
                   }else if(res.data.status == 500){
                       this.spinner = true;
                   }

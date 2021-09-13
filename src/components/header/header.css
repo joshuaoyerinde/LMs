@@ -230,9 +230,14 @@
     max-width:640px;
     border-radius: 0px;
     /* max-height: 93vh; */
-    margin-top: 75px;
+    margin-top: 70px;
+    background-color: #F9682F;
     /* overflow-y: hidden; */
     max-height: 100vh !important;
+    z-index: 15 !important;
     /* padding: 40px 30px 20px; */
     /* background-color: red; */
+  }
+  .md-dialog{
+      z-index: 15;
   }

@@ -20,7 +20,7 @@ export default {
     }),
     methods:{
         loginRoute(){
-            this.$router.push({name:'Home'})
+            // this.$router.push({name:'Home'})
                 let token = this.$route.params.id;
                 let formtk = new FormData();
                 formtk.append('tokenize', token)

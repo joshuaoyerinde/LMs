@@ -6,9 +6,13 @@ const actions={
 
     //ADMIN ACTION LOGIN .........
    async adminUSerLogin({commit},details){
-        let url = "http://localhost:8000/api/login"
-        let response = await axios.post(url,details);
-        commit('GET_RESPONSE', response.data)
+        let url = "http://localhost:8000/api/adminlogin"
+        let res = await axios.post(url,details)
+         console.log(res.data.success);
+         let hh = res.data;
+         console.log(hh)
+         commit('GET_RESPONSE', res.data.success)
+        // console.log(details);
     }
     //.............
 }
