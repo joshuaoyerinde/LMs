@@ -9,6 +9,7 @@ import Verify from '../views/Verify.vue'
 import Videopage from '../components/videopage/videopage.vue'
 import UserAccount from '../views/users-page/User.vue';
 import adminLogin from '../Admin/login/Login'
+import TutorsBash from '../Admin/tutors/Tutors'
 Vue.use(VueRouter)
 
 const routes = [
@@ -28,7 +29,9 @@ const routes = [
   {path: '/user', name:'user', component:UserAccount},
   
   // for all admin routes........
-  {path:'/admin/login', component:adminLogin}
+  {path:'/admin/login', component:adminLogin},
+  // ..........Admin is Using for tutors......... Once they login it takes them to tutors route
+  {path:'/admin/tutors', component: TutorsBash}
 ]
 
 const router = new VueRouter({
