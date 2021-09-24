@@ -6,14 +6,14 @@
           <div class="scrollable-cards">
             <div class="card-h">
               <div class="card-thumbnail">
-                <img src="https://res.cloudinary.com/hammv7x3f/image/upload/c_fill,g_face,h_320,w_320/v1522503864/ngpb7rercmaftyoanant.jpg">
+                <img src="../../assets/pics/pt-1.png">
                 <div class="card-specialties">
                   <!-- ART-THÉRAPIE -->
                 </div>
               </div>
               <div class="card-body">
                 <h3 class="card-title">
-                  Réflexologie de confort & Expression par le rythme
+                  Complete Python Course 2021
                 </h3>
                 <div class="card-name">
                   Alice Larrabure
@@ -36,18 +36,13 @@
 
             <div class="card-h">
               <div class="card-thumbnail">
-                <img src="https://res.cloudinary.com/hammv7x3f/image/upload/c_fill,g_face,h_320,w_320/v1522748419/lz9awyiyhu3art6p8xsg.jpg">
-                
-                <div class="card-specialties">
-                  Access Bars® <br>
-                  NATUROPATHIE <br>
-                  NUTRITION <br>
-                  PLANTES & HUILES ESSENTIELLES
-                </div>
+                <img src="../../assets/pics/pt-1.png">
+                <!-- <div class="card-specialties">
+                </div> -->
               </div>
               <div class="card-body">
                 <h3 class="card-title">
-                  Réflexologie de confort
+                 A complete Python Course For Beginners
                 </h3>
                 <div class="card-name">
                   Farah Benwahoud
@@ -70,16 +65,16 @@
                       
             <div class="card-h">
               <div class="card-thumbnail">
-                <img src="https://res.cloudinary.com/hammv7x3f/image/upload/c_fill,g_face,h_320,w_320/v1542202459/ilncu71pfjlq2ilei7gl.jpg">
-                <div class="card-specialties">
+                <img src="../../assets/pics/andrey-suslov.png">
+                <!-- <div class="card-specialties">
                   EMDR <br>
                   PSYCHO-ÉNERGÉTIQUE <br>
                   RESPIRATION HOLOTROPIQUE
-                </div>
+                </div> -->
               </div>
               <div class="card-body">
                 <h3 class="card-title">
-                  Fenêtre sur soi et créativité : Champ d'argile®, Soulcollage®
+                  Complete A.I Course from Beginner
                 </h3>
                 <div class="card-name">
                   Solange Lemoine
@@ -102,13 +97,134 @@
 
             <div class="card-h">
               <div class="card-thumbnail">
-                <img src="https://res.cloudinary.com/hammv7x3f/image/upload/c_fill,g_face,h_320,w_320/v1542904330/uycx26c5rajzsynaapzf.jpg">
-                
-                <div class="card-specialties">
-                  YOGA <br>
-                  YOGA DE L'ÉNERGIE <br>
-                  RUNNING <br>
+                <img src="../../assets/pics/python-popularity.png">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">
+                  Running Yoga
+                </h3>
+                <div class="card-name">
+                  Philippe Carralou
                 </div>
+              </div>
+              <div class="card-foot">
+                <div class="card-rating">
+                  <div class="stars">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  </div>
+                <h3> {{getnum}} </h3>
+
+                  <button @click="funcIncrease(2)">Count</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- another section of courses -->
+        <div class="wrapper wrapper-light mt-5">
+        <div class="scrollable-container">
+          <div class="scrollable-cards">
+            <div class="card-h">
+              <div class="card-thumbnail">
+                <img src="../../assets/pics/pt-1.png">
+                <div class="card-specialties">
+                  <!-- ART-THÉRAPIE -->
+                </div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">
+                  Complete Python Course 2021
+                </h3>
+                <div class="card-name">
+                  Alice Larrabure
+                </div>
+              </div>
+              <div class="card-foot">
+                <div class="card-rating">
+                  <div class="stars">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  </div>
+                  7 commentaires
+                </div>
+              </div>
+            </div>
+
+            <div class="card-h">
+              <div class="card-thumbnail">
+                <img src="../../assets/pics/pt-1.png">
+                <!-- <div class="card-specialties">
+                </div> -->
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">
+                 A complete Python Course For Beginners
+                </h3>
+                <div class="card-name">
+                  Farah Benwahoud
+                </div>
+              </div>
+              <div class="card-foot">
+                <div class="card-rating">
+                  <div class="stars">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  </div>
+                  20 commentaires
+                </div>
+              </div>
+            </div>
+                      
+            <div class="card-h">
+              <div class="card-thumbnail">
+                <img src="../../assets/pics/andrey-suslov.png">
+                <!-- <div class="card-specialties">
+                  EMDR <br>
+                  PSYCHO-ÉNERGÉTIQUE <br>
+                  RESPIRATION HOLOTROPIQUE
+                </div> -->
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">
+                  Complete A.I Course from Beginner
+                </h3>
+                <div class="card-name">
+                  Solange Lemoine
+                </div>
+              </div>
+              <div class="card-foot">
+                <div class="card-rating">
+                  <div class="stars">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  </div>
+                  45 commentaires
+                </div>
+              </div>
+            </div>
+
+            <div class="card-h">
+              <div class="card-thumbnail">
+                <img src="../../assets/pics/python-popularity.png">
               </div>
               <div class="card-body">
                 <h3 class="card-title">

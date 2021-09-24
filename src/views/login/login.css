@@ -91,3 +91,15 @@
         color: white;
     }
 }
+.md-progress-bar{
+    background-color: #fdbea5 !important;
+}
+.md-progress-bar /deep/.md-progress-bar-fill{
+  background-color: #F9682F !important;
+}
+.md-progress-bar /deep/.md-progress-bar-fill:after{
+  background-color: #F9682F !important;
+}
+.md-progress-bar /deep/.md-progress-bar-track:after{
+  background-color: #F9682F !important;
+}

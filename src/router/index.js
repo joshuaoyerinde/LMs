@@ -11,7 +11,7 @@ import UserAccount from '../views/users-page/User.vue';
 import adminLogin from '../Admin/login/Login'
 import TutorsBash from '../Admin/tutors/Tutors'
 Vue.use(VueRouter)
-
+let isAuthenticated = JSON.parse(localStorage.getItem('auth'))
 const routes = [
   {
     path: '/',
@@ -29,9 +29,23 @@ const routes = [
   {path: '/user', name:'user', component:UserAccount},
   
   // for all admin routes........
-  {path:'/admin/login', component:adminLogin},
+  {path:'/admin/login',name:"adminLogin", component:adminLogin},
   // ..........Admin is Using for tutors......... Once they login it takes them to tutors route
-  {path:'/admin/tutors', component: TutorsBash}
+  {
+    path:'/admin/tutors',  
+    name:"tutors", 
+    component: TutorsBash,   
+      beforeEnter: (to, from, next) => {
+          if (!isAuthenticated) {
+            next(false);
+          }else{
+            next()
+          }
+        },
+        children:[
+          {path:"/addcourse", name:'Addcourse', component: () => import('../Admin/tutors/Addcourse')}
+        ]
+  }
 ]
 
 const router = new VueRouter({

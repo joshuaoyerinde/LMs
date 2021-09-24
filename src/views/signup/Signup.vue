@@ -13,19 +13,19 @@
                 </div>
                 <form action="" @submit.prevent="onSubmitRegister">
                     <div class="row p-2">
-                        <div class="form-group col-md-11">
+                        <div class="form-group col-md-11 mb-3">
                             <input type="text" v-model="firstname" class="form-control" placeholder="Firstname">
                         </div>  
-                        <div class="form-group col-md-11">
+                        <div class="form-group col-md-11 mt-n3">
                             <input type="text" v-model="lastname" class="form-control" placeholder="Lastname">
                         </div>  
-                        <div class="form-group col-md-11">
+                        <div class="form-group col-md-11 mt-n3">
                             <input type="text" v-model="phone" class="form-control" placeholder="Phonenumber">
                         </div>  
-                        <div class="form-group col-md-11">
+                        <div class="form-group col-md-11 mt-n3">
                             <input type="text" v-model="skill" class="form-control" placeholder="Skills">
                         </div>
-                        <div class="form-group col-md-11">
+                        <div class="form-group col-md-11 mt-n3">
                             <input type="text" v-model="email" class="form-control" placeholder="Email">
                         </div> 
                         <!-- <div class="form-group col-md-11">
@@ -35,17 +35,17 @@
                             <option value="Tutor">Tutor</option>
                           </select> 
                         </div>  -->
-                        <div class="form-group col-md-11">
+                        <div class="form-group col-md-11 mt-n3">
                             <input type="text" v-model="password" class="form-control" placeholder="Password">
                         </div> 
                         <!-- <div class="form-group col-md-11">
                             <input type="text" v-model="confirm" class="form-control" placeholder="Confirm password">
                         </div>    -->
-                        <div class="form-group col-md-11">
+                        <div class="form-group col-md-11 mt-n3">
                             <input type="text" v-model="level" class="form-control" placeholder="Academic Level">
                         </div>      
                     </div>
-                     <div class="mt-n4 mb-2"> 
+                     <div class="mt-n4 mt-n2"> 
                         <md-progress-spinner v-if="spinner" class="md-accent" :md-diameter="30" md-mode="indeterminate"></md-progress-spinner>
                         <button type="submit" class="btn">Sign up</button>
                     </div>
@@ -100,7 +100,7 @@ export default {
                       console.log("nice login");
                       this.spinner = false
                       this.$emit('hidesignUp',this.hideSignUp);
-                  }else if(res.data.status == 500){
+                  }else if(res.status == 500){
                       this.spinner = true;
                   }
               }, 3000);

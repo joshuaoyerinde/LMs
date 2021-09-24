@@ -13,7 +13,7 @@
                       <img src="../../assets/admin.svg" class="rounded-circle" alt="" width="150px">
                     </div>
                     <div class="dragArea row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="name">
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-1" data-for="name">
                             <input type="text" v-model="email" placeholder="Email" data-form-field="name" class="form-control" value="" id="name-form7-2">
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="email">
@@ -72,7 +72,9 @@ export default {
                 // console.log(res);
                 if (res.status == 200) {
                     this.loading = false
+                    localStorage.setItem('auth',JSON.stringify(res.data.success));
                     console.log(res.data.success);
+                    this.$router.replace({name:"tutors"});
                 }
             })
             .catch(err=>{

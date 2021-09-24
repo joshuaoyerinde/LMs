@@ -14,6 +14,7 @@
                        <button @click="hideDialog"><i class="fa fa-times" aria-hidden="true"></i></button> 
                     </div>
                 </div>
+                <md-progress-bar md-mode="indeterminate" v-show="loading"></md-progress-bar>
                 <form @submit.prevent="onSubmitLogin">
                     <div class="row p-4 mt-5">
                         <div class="col-md-12 mb-4">
@@ -46,10 +47,11 @@ import axios from 'axios';
   export default {
     name: 'Login',
     data: () => ({
-      showDialog: false,
+        showDialog: false,
         email:"",
         password:"",
         URL:"http://localhost:8000/api/login",
+        loading:false
     }),
     props:['hideLogin'],
     methods:{
@@ -60,9 +62,18 @@ import axios from 'axios';
             let dataLogin = new FormData()
             dataLogin.append('email', this.email)
             dataLogin.append('password', this.password)
+            this.loading = true
             axios.post(this.URL, dataLogin).then(res=>{
-                console.log(res);
+                if(res.status == 200){
+                    this.loading = false
+                    console.log(res.data);
+                }
             }).catch(err=>{
+                  setTimeout(() => {
+                        this.loading = false
+                         this.showSnackbar = true
+                        this.msg = "Invalid Details Please Login Again"
+                }, 5000);
                 console.log(err)
             })
         }

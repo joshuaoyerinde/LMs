@@ -26,7 +26,10 @@ export default {
                 formtk.append('tokenize', token)
                 axios.post(this.URL,formtk)
                 .then(res=>{
-                    console.log(res.data);
+                    if (res.status == 200) {
+                        this.$router.replace({path:'/user'});
+                        console.log(res.data);
+                    }
                 })
         }
     },

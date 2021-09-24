@@ -8,7 +8,7 @@
       <v-spacer></v-spacer>
      
       <v-switch v-model="switch1" @click="changeColor()"  inset class="mt-4">Dark Mode</v-switch>
-      <v-btn  elevation="3" color="orange">Logout</v-btn>
+      <v-btn  elevation="3" color="success">Logout</v-btn>
     </v-app-bar>
 
       <!-- the component  view -->
@@ -57,14 +57,15 @@
 </template> 
 <script>
   export default {
+    name:"tutors",
     data () {
       return {
       drawer: null,
         items: [
-          { title: 'Darshboard', icon: 'mdi-home-city',color:'orange', route:'/darsh'},
-          { title: 'AddCoin', icon: 'mdi-forum',color:'orange', route:'/adds' },
-          { title: 'My Account', icon: 'mdi-account',color:'orange', route:'/addcoin' },
-          { title: 'Users', icon: 'mdi-account-group-outline',color:'orange' },
+          { title: 'Darshboard', icon: 'mdi-home-city',color:'#F9682F', route:'/darsh'},
+          { title: 'Addcourse', icon: 'mdi-forum',color:'#F9682F', route:'/addcourse' },
+          { title: 'My Account', icon: 'mdi-account',color:'#F9682F', route:'/addcoin' },
+          { title: 'Users', icon: 'mdi-account-group-outline',color:'#F9682F' },
         ],
         style:'',
         color:'',
@@ -102,7 +103,7 @@
 <style scoped>
   .v-sheet::v-deep.v-app-bar.v-toolbar{
     /* color:red; */
-    background-color: #57b846 !important;
+    background-color: #F9682F !important;
     /* height: 45px !important; */
     /* padding: 40px 20px 40px !important; */
   
