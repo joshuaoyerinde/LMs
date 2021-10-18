@@ -2,8 +2,11 @@ const state={
     num:30,
 
     // admin responce..........
-    response:""
+    response:"",
+    // users response....
+    course_res:"",
 
+    isLoginUserName:localStorage.users_details
 }
 
 export default state;

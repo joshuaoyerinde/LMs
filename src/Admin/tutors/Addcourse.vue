@@ -1,8 +1,9 @@
 <template>
     <div class="container">
-        <h3>Tutors Page</h3>
+        <!-- <h3>Tutors Page</h3> -->
             <div class="card-expansion">
                 <md-card>
+                  <md-progress-bar md-mode="indeterminate" v-show="loading"></md-progress-bar>
                     <div class="row mt-3">
                         <div class="col-md-8 col-sm-8 col-lg-8">
                             <md-card-header>
@@ -20,17 +21,23 @@
                                     <form @submit.prevent="onSubmitCourse" class="mt-3">
                                     <div class="row p-2 justify-content-center">
                                         <div class="form-group col-md-11">
-                                            <v-select
-                                            :items="items"
-                                            label="Select Course"
-                                            dense
-                                            solo
-                                            v-model="coursename"
-                                            ></v-select>
+                                           <div class="form-group">
+                                             <label for=""></label>
+                                             <select class="form-control" v-model="coursename">
+                                                <option value="">Select Courses</option>
+                                               <option :value="course.id" v-for="course in courses" :key="course.id">{{course.course_name}}</option>
+                                             </select>
+                                           </div>
                                         </div>  
                                         <div class="form-group col-md-11 mt-n2">
-                                          <textarea style="resize: none;" class="form-control" v-model="description" placeholder="Ccourse Description.."   cols="20" rows="5"></textarea>
-                                        </div>  
+                                          <textarea style="resize: none;" class="form-control" v-model="description" placeholder="Course Description.."   cols="20" rows="5"></textarea>
+                                        </div> 
+                                        <div class="input-group col-md-11 mt-n3">
+                                             <div class="input-group-prepend">
+                                                <span class="input-group-text">&#x20A6;</span>
+                                            </div>
+                                             <input v-model="amount"  class="form-control"  type="tel" placeholder="1000" name="amount" required />
+                                        </div> 
                                     </div>
                                     <div class="">
                                         <button type="submit" class="btn">Add Course</button>
@@ -61,6 +68,10 @@
                       This a learning management system provides an instructor with a way <br/> to create and deliver content, monitor student participation and assess student ...
                     </div>
                 </md-card>
+                <md-snackbar :md-position="position" :md-duration="isInfinity ? Infinity : duration" :md-active.sync="showSnackbar" md-persistent>
+                    <span>{{msg}}!</span>
+                    <md-button class="md-primary" @click="showSnackbar = false">Retry</md-button>
+                </md-snackbar>
             </div>
     </div>
 </template>
@@ -69,12 +80,22 @@ import axios from 'axios';
 export default {
     name:"Addcourse",
     data:()=>({
-          items: ['Angular', 'Python', 'Graphics', 'Web Developent', 'Vue', 'React'],
+        //   items: ['Angular', 'Python', 'Graphics', 'Web Developent', 'Vue', 'React'],
             preview: "",
             image: "",
             coursename:'',
             description:'',
-            URL:"http://localhost:8000/api/createcourse"
+            URL:"http://localhost:8000/api/createcourse",
+            courses:"",
+            loading:false,
+            position: 'center',
+            duration: 8000,
+            isInfinity: false,
+            snackBar:false,
+            showSnackbar: false,
+            msg:"",
+            amount:""
+
     }),
     methods:{
         // upload(e){
@@ -97,17 +118,41 @@ export default {
         },
         onSubmitCourse(){
               console.log(this.image)
+              console.log(this.coursename);
               let formdata  = new FormData();
-              formdata.append('coursename', this.coursename);
+              formdata.append('courseListid', this.coursename);
               formdata.append('desciption', this.description);
               formdata.append('file_upload',this.image);
+              formdata.append('price',this.amount);
+               this.loading = true
               axios.post(this.URL,formdata).then(res=>{
-                  console.log(res);
+                  console.log(res.data);
+                  if(res.status == 200){
+                        this.loading = false
+                        this.msg = res.data.sucesss
+                        this.showSnackbar = true; 
+                  }
+              }).catch(err=>{
+                  if(err){
+                       setTimeout(() => {
+                          this.loading = false
+                          this.msg = "Not Successfully"
+                          this.showSnackbar = true
+                      }, 4000);
+                  }
               })
-
-              
+        },
+        getCourses(){
+            axios.get('http://127.0.0.1:8000/api/getcourses').then(res=>{
+                console.log(res.data);
+                this.courses = res.data
+            }).catch(err=>console.log(err));
         }
 
+    },
+    // live cycles.....
+    mounted(){
+        this.getCourses();
     }
 
 }

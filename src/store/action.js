@@ -13,7 +13,16 @@ const actions={
          console.log(hh)
          commit('GET_RESPONSE', res.data.success)
         // console.log(details);
-    }
+    },
     //.............
+    getCoursesList({commit},res){
+        const url = "http://127.0.0.1:8000/api/fetchcourses"
+        axios.get(url).then(each=>{
+            res = each.data
+            console.log(res);
+            commit('GET_COURSERES', res)
+        })
+
+    }
 }
 export default actions

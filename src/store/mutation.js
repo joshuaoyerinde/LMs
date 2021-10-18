@@ -6,8 +6,12 @@ const mutations={
     GET_RESPONSE(state,res){
         state.response = res
         console.log(res);
-    }
+    },
     // ..........
+    GET_COURSERES(state,res){
+        state.course_res = res
+        console.log(res)
+    }
 }
 
 export default mutations;

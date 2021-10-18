@@ -28,8 +28,13 @@
                         <a class="nav-link" href="#">Gallery</a>
                         <div class="radio-box mt-n2"></div>
                     </li>
-                    <li class="nav-item active mt-1">
+                    <li class="nav-item active mt-1" v-if="loginbtn">
                         <button class="nav-link nav-button" @click="showDialogBox()">Sign in</button>
+                    </li>
+                     <li class="nav-item active mt-1 mt-n1" v-if="useracc">
+                       <div class="user-title ">
+                           {{userdata.substring(0, 2)}}
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -44,13 +49,25 @@
 export default {
     name:'Navbar',
     data:()=>({
-        showDialog:true
+        showDialog:true,
+        useracc:false,
+        loginbtn:true,
+        auth_token:localStorage.token_lm
        
     }),
 
     // computed:{
-    props:['showDialogBox1'],
-       
+    props:['showDialogBox1',"userdata"],
+       mounted(){
+        if (this.auth_token) {
+               this.useracc = true;
+               this.loginbtn=false
+        }
+        else{
+               this.loginbtn=true
+               this.useracc = false;
+           }
+       },
     // }
     methods:{
         showDialogBox(){

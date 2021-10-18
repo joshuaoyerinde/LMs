@@ -28,6 +28,7 @@ export default {
                 .then(res=>{
                     if (res.status == 200) {
                         this.$router.replace({path:'/user'});
+                        localStorage.setItem('users_details',JSON.stringify(res.data));
                         console.log(res.data);
                     }
                 })

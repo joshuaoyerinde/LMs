@@ -7,9 +7,14 @@ import Python from '../components/catigories/python/Python.vue'
 import Notice from '../views/Notice.vue'
 import Verify from '../views/Verify.vue'
 import Videopage from '../components/videopage/videopage.vue'
+// users......
 import UserAccount from '../views/users-page/User.vue';
+import Course from '../views/users-page/Course.vue'
+// for Tutors/.................
 import adminLogin from '../Admin/login/Login'
 import TutorsBash from '../Admin/tutors/Tutors'
+
+// import TurosDash from '../Admin/tutors/Dash'
 Vue.use(VueRouter)
 let isAuthenticated = JSON.parse(localStorage.getItem('auth'))
 const routes = [
@@ -27,6 +32,7 @@ const routes = [
 
   // route for user acoount
   {path: '/user', name:'user', component:UserAccount},
+  {path: '/course/:coursename', name:'Course', component:Course},
   
   // for all admin routes........
   {path:'/admin/login',name:"adminLogin", component:adminLogin},
@@ -43,7 +49,8 @@ const routes = [
           }
         },
         children:[
-          {path:"/addcourse", name:'Addcourse', component: () => import('../Admin/tutors/Addcourse')}
+          {path:"/addcourse", name:'Addcourse', component: () => import('../Admin/tutors/Addcourse')},
+          {path:"/dash", name:'Dashboard', component: () => import('../Admin/tutors/Dash')}
         ]
   }
 ]

@@ -14,8 +14,8 @@
                        <button @click="hideDialog"><i class="fa fa-times" aria-hidden="true"></i></button> 
                     </div>
                 </div>
-                <md-progress-bar md-mode="indeterminate" v-show="loading"></md-progress-bar>
                 <form @submit.prevent="onSubmitLogin">
+                <md-progress-bar md-mode="indeterminate" v-show="loading"></md-progress-bar>
                     <div class="row p-4 mt-5">
                         <div class="col-md-12 mb-4">
                             <input type="text" name="" v-model="email" class="form-control" placeholder="Enter Email" >
@@ -67,6 +67,7 @@ import axios from 'axios';
                 if(res.status == 200){
                     this.loading = false
                     console.log(res.data);
+                    localStorage.setItem('token_lm', res.data.access_token);
                 }
             }).catch(err=>{
                   setTimeout(() => {

@@ -22,19 +22,19 @@
     scroll-snap-align: center;
     background: white;
     width: 220px;
-    height: 300px;
+    height: 260px;
     display: flex;
     flex-direction: column;
   }
   .card-h .card-thumbnail {
-    height: 190px;
+    height: 140px;
     position: relative;
     overflow: hidden;
   }
   .card-h .card-thumbnail img {
     display: block;
     width: 100%;
-    height: 190px;
+    height: 160px;
     -o-object-fit: cover;
     object-fit: cover;
   }
@@ -112,7 +112,22 @@
     overflow-x: auto;
     display: flex;
     padding: 5px;
-    -webkit-overflow-scrolling: touch;
+    /* -webkit-overflow-scrolling: touch; */
+  }
+  .scrollable-cards::-webkit-scrollbar{
+    /* background-color: #ffd100; */
+    /* width: 3px; */
+    height: 4.6px;
+    cursor: pointer;
+  }
+  .scrollable-cards::-webkit-scrollbar-thumb{
+    background-color: #F9682F;
+    border-radius: 20px;
+    width: 2.0px;
+  }
+  .scrollable-cards::-webkit-scrollbar-track{
+    background-color: inherit;
+    border-radius: 20px;
   }
   .scrollable-cards .card-h {
     flex-shrink: 0;
@@ -134,4 +149,41 @@
     .scrollable-cards .card-h:last-child {
       border-right: 0;
     }
+  }
+  .course-desc{
+    cursor: pointer;
+  }
+  .course-desc:hover{
+    color: #F9682F;
+    text-decoration-color: blue;
+    text-decoration:underline
+  }
+  .header{
+    height: 20vh;
+    position: fixed top;
+    /* background-attachment: fixed; */
+    /* background: rgba(19, 18, 17, 0.85); */
+   
+    /* background-color: black; */
+  }
+  .header-image{
+    background-image: url('../../assets/pics/woman.png');
+    height: 20vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+   
+  
+    /* z-index: 37; */
+  }
+  .header-transparent{
+    background: transparent;
+    background: rgba(0, 0, 0, 0.652);
+    height: 20vh;
+    z-index: -3;
+    background-attachment: fixed;
+  }
+  .header-content{
+      margin-top: 20px;
   }

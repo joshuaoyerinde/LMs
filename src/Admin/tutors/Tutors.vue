@@ -62,7 +62,7 @@
       return {
       drawer: null,
         items: [
-          { title: 'Darshboard', icon: 'mdi-home-city',color:'#F9682F', route:'/darsh'},
+          { title: 'Darshboard', icon: 'mdi-home-city',color:'#F9682F', route:'/dash'},
           { title: 'Addcourse', icon: 'mdi-forum',color:'#F9682F', route:'/addcourse' },
           { title: 'My Account', icon: 'mdi-account',color:'#F9682F', route:'/addcoin' },
           { title: 'Users', icon: 'mdi-account-group-outline',color:'#F9682F' },

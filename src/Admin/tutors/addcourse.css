@@ -22,6 +22,18 @@ img{
 select{
     font-size: 12px;
     padding: 7px 30px 7px !important;
+    cursor: progress;
+}
+.input-group-text{
+  background-color: #F9682F;
+  height: 36px;
+  color: white;
+  border-radius: 20px;
+}
+.input-group-prepend{
+  border: 1px solid #F9682F;
+  border-radius: 20px;
+  background-color: #F9682F;
 }
 @media (max-width: 768px) {
     img {
@@ -124,4 +136,19 @@ select{
   outline: none;
   transition: all 1s 0s;
   color: white;
+}
+.md-progress-bar{
+  background-color: #fdbea5 !important;
+}
+.md-progress-bar /deep/.md-progress-bar-fill{
+background-color: #F9682F !important;
+}
+.md-progress-bar /deep/.md-progress-bar-fill:after{
+background-color: #F9682F !important;
+}
+.md-progress-bar /deep/.md-progress-bar-track:after{
+background-color: #F9682F !important;
+}
+.md-card{
+  box-shadow: 0.1px solid black;
 }
