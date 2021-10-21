@@ -2,17 +2,21 @@
     <div>
         <div class="row">
             <div class="col-md-8">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quos, sint doloribus minus nostrum ullam esse tempora nesciunt odit eos. Dicta beatae asperiores corrupti in, doloribus sed ab. Eos, aliquam!
+                <!-- <vue-core-video-player src=""></vue-core-video-player>                  -->
             </div>
         </div>
     </div>
 </template>
 <script>
+// import VueCoreVideoPlayer from 'vue-core-video-player';
 export default {
     name:"Watch",
     data:()=>({
 
-    })
+    }),
+    //  components:{
+    //     VueCoreVideoPlayer
+    // }
 }
 </script>
 <style scoped>

@@ -6,6 +6,9 @@ import lVuex from './store/index'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css'
+// import 'videojs-contrib-hls/dist/videojs-contrib-hls'
+import 'videojs-contrib-hls.js/src/videojs.hlsjs'
+
 //vuetify
 import vuetify from './plugins/vuetify'
 

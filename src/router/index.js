@@ -13,6 +13,7 @@ import Course from '../views/users-page/Course.vue'
 // for Tutors/.................
 import adminLogin from '../Admin/login/Login'
 import TutorsBash from '../Admin/tutors/Tutors'
+import Watch from '../views/users-page/Watch'
 
 // import TurosDash from '../Admin/tutors/Dash'
 Vue.use(VueRouter)
@@ -33,7 +34,7 @@ const routes = [
   // route for user acoount
   {path: '/user', name:'user', component:UserAccount},
   {path: '/course/:coursename', name:'Course', component:Course},
-  
+  {path: '/watch', name:'Course', component:Watch},
   // for all admin routes........
   {path:'/admin/login',name:"adminLogin", component:adminLogin},
   // ..........Admin is Using for tutors......... Once they login it takes them to tutors route
