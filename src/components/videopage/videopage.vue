@@ -2,8 +2,7 @@
     <div>
         <Navbar/>
         <div class="container-fluid">
-            <div class="ml-4 mt-4 p-4">
-            
+            <div class="ml-4 mt-4 p-4">            
         </div>
         <div class="row p-4 justify-content-center">
             <div class="col-md-8 col-12">
@@ -11,7 +10,7 @@
             </div>
             <div class="col-md-4 col-sm-4 mt-2 side-resources">
                <v-row justify="center">
-                <v-expansion-panels accordion :style='{width:"95%",marginLeft:"4px"}'>
+                <v-expansion-panels accordion :style='{width:"95%",marginLeft:"4px"}' class="mt-2">
                     <v-expansion-panel
                     v-for="(item,i) in 10" 
                     :key="i"

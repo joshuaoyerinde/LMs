@@ -15,7 +15,7 @@
                         <!-- <iframe :src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                         <div class="card-body">
                             <div class="card-title">$ <span>500</span></div>
-                           <b>This course includes:</b> 
+                           <b>This course includes:{{getEmail}}</b> 
                            <ul class="nav flex-column">
                                <li>22 hours on-demand video</li>
                                 <li>14 articles</li>
@@ -24,7 +24,7 @@
                            <div class="text-center">
                                 <paystack
                                     :amount="amount * 100"
-                                    :email="email"
+                                    :email="getEmail"
                                     :paystackkey="PUBLIC_KEY"
                                     :reference="reference"
                                     :callback="processPayment"
@@ -52,11 +52,13 @@ export default {
         course:JSON.parse(localStorage.getItem('eachcourse')),
         url:"storage/videos/",
         video_file:"",
-        amount: 0,
+        amount: 100,
         full_name: '',
-        email: '',
+        // email: ,
         reference:'',
-        PUBLIC_KEY:'pk_test_5e72e62644d8e95d662f685ccceae48bc345bd61'
+        PUBLIC_KEY:'pk_test_5e72e62644d8e95d662f685ccceae48bc345bd61',
+        getuser:JSON.parse(localStorage.getItem('users_details'))
+
     }),
     components:{
         Navbar,
@@ -71,6 +73,10 @@ export default {
             text += possible.charAt(Math.floor(Math.random() * possible.length));
             return text;
             // console.log(text);
+        },
+         getEmail(){
+             let getTheMail = this.getuser.filter(data => data.email)
+             return getTheMail[0].email
         }
     },
     methods:{
@@ -86,14 +92,17 @@ export default {
         },
         close: () => {
             console.log("You closed checkout page")
-        }
+        },
+       
     },
     created(){
         console.log(this.course);
+       
     },
     mounted(){
         this.getVideoFile();
-        
+        //  this.getEmail();
+       
     }
 }
 </script>

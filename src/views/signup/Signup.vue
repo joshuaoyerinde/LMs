@@ -16,16 +16,16 @@
                         <div class="form-group col-md-11 mb-3">
                             <input type="text" v-model="firstname" class="form-control" placeholder="Firstname">
                         </div>  
-                        <div class="form-group col-md-11 mt-n3">
+                        <div class="form-group col-md-11 mt-n4">
                             <input type="text" v-model="lastname" class="form-control" placeholder="Lastname">
                         </div>  
-                        <div class="form-group col-md-11 mt-n3">
+                        <div class="form-group col-md-11 mt-n4">
                             <input type="text" v-model="phone" class="form-control" placeholder="Phonenumber">
                         </div>  
-                        <div class="form-group col-md-11 mt-n3">
+                        <div class="form-group col-md-11 mt-n4">
                             <input type="text" v-model="skill" class="form-control" placeholder="Skills">
                         </div>
-                        <div class="form-group col-md-11 mt-n3">
+                        <div class="form-group col-md-11 mt-n4">
                             <input type="text" v-model="email" class="form-control" placeholder="Email">
                         </div> 
                         <!-- <div class="form-group col-md-11">
@@ -35,7 +35,7 @@
                             <option value="Tutor">Tutor</option>
                           </select> 
                         </div>  -->
-                        <div class="form-group col-md-11 mt-n3">
+                        <div class="form-group col-md-11 mt-n4">
                             <input type="text" v-model="password" class="form-control" placeholder="Password">
                         </div> 
                         <!-- <div class="form-group col-md-11">

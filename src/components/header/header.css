@@ -230,10 +230,10 @@
     max-width:640px;
     border-radius: 0px;
     /* max-height: 93vh; */
-    margin-top: 65px;
+    margin-top: 55px;
     background-color: #F9682F;
     /* overflow-y: hidden; */
-    max-height: 100vh !important;
+    max-height: 90vh !important;
     z-index: 15 !important;
     /* padding: 40px 30px 20px; */
     /* background-color: red; */
