@@ -50,7 +50,7 @@ export default {
     name:"Course",
     data:()=>({
         course:JSON.parse(localStorage.getItem('eachcourse')),
-        url:"storage/videos/",
+        url:"localhost:8000/storage/videos/",
         video_file:"",
         amount: 100,
         full_name: '',

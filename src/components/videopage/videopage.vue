@@ -2,7 +2,7 @@
     <div>
         <Navbar/>
         <div class="container-fluid">
-            <div class="ml-4 mt-4 p-4">            
+            <div class="ml-4 mt-2 pt-5">            
         </div>
         <div class="row p-4 justify-content-center">
             <div class="col-md-8 col-12">
@@ -12,7 +12,7 @@
                <v-row justify="center">
                 <v-expansion-panels accordion :style='{width:"95%",marginLeft:"4px"}' class="mt-2">
                     <v-expansion-panel
-                    v-for="(item,i) in 10" 
+                    v-for="(item,i) in 16" 
                     :key="i"
                     >
                     <v-expansion-panel-header>Session 2:Getting stated </v-expansion-panel-header>
@@ -70,6 +70,13 @@ export default {
     .side-resources{
         overflow-y: auto; 
         height: 80vh;
+    }
+    .side-resources::-webkit-scrollbar {
+        width: 4px;
+    }
+    .side-resources::-webkit-scrollbar-thumb{
+        background-color:#F9682F;
+         border-radius: 100px;
     }
 </style>
 
